@@ -19,11 +19,11 @@
         .container {
             text-align: center;
             background: white;
-            padding: 500px;
+            padding: 20px; /* Reduced padding for better view on small screens */
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             max-width: 600px;
-            width: 100%;
+            width: 90%; /* Adjusted width for responsiveness */
         }
 
         .title {
@@ -79,7 +79,7 @@
 <body>
     <div class="container">
         <div class="title">Wikipedia Article Generator</div>
-        <div class="description">We will generate any wikipedia article for you, it will help you to be smart and know everything there is to know about! We are worth trusting as we keep your interests and factors in mind.</div>
+        <div class="description">We will generate any Wikipedia article for you, it will help you to be smart and know everything there is to know about! We are worth trusting as we keep your interests and factors in mind.</div>
         <button class="generate-btn" id="generate-btn" onclick="generateArticle()">Generate</button>
         <div class="warning">Attention! Important to read! We generate any content (only useful and entertaining), so in case of errors, contact us.</div>
         <div class="article" id="article"></div>
