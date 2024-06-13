@@ -94,18 +94,16 @@
             const button = document.getElementById('generate-btn');
             button.classList.add('loading');
 
-            AdController.show().then(result => {
-                if (result.done) {
+            AdController.show()
+                .then(result => {
                     fetchArticle();
-                } else {
-                    console.warn('Ad was not watched till the end.');
-                }
-                button.classList.remove('loading');
-            }).catch(error => {
-                console.error('Error showing the ad:', error);
-                button.classList.remove('loading');
-                fetchArticle();
-            });
+                    button.classList.remove('loading');
+                })
+                .catch(error => {
+                    console.error('Error showing the ad:', error);
+                    button.classList.remove('loading');
+                    fetchArticle();
+                });
         }
 
         function fetchArticle() {
